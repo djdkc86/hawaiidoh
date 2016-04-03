@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="221f1344-41bc-4ebf-ab61-85e48c09b17b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hawaiidoh/settings.py" afterPath="$PROJECT_DIR$/hawaiidoh/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/templates/login/base.html" afterPath="$PROJECT_DIR$/login/templates/login/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reportinput/forms.py" afterPath="$PROJECT_DIR$/reportinput/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reportinput/templates/reportinput/epi12a.html" afterPath="$PROJECT_DIR$/reportinput/templates/reportinput/epi12a.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reportinput/templates/reportinput/epi12b.html" afterPath="$PROJECT_DIR$/reportinput/templates/reportinput/epi12b.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reportinput/templates/reportinput/studentupdate12a.html" afterPath="$PROJECT_DIR$/reportinput/templates/reportinput/studentupdate12a.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reportinput/templates/reportinput/studentupdate12b.html" afterPath="$PROJECT_DIR$/reportinput/templates/reportinput/studentupdate12b.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reportinput/views.py" afterPath="$PROJECT_DIR$/reportinput/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reportviewing/views.py" afterPath="$PROJECT_DIR$/reportviewing/views.py" />
     </list>
     <ignored path="hawaiidoh.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,8 +91,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login/templates/login/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.285714">
-              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            <state vertical-scroll-proportion="-12.857142">
+              <caret line="30" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="75" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -129,8 +121,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hawaiidoh/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.9585799">
-              <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+            <state vertical-scroll-proportion="4.034024">
+              <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -188,8 +180,8 @@
         <option value="$PROJECT_DIR$/reportinput/templates/reportinput/studentupdate12b.html" />
         <option value="$PROJECT_DIR$/reportinput/views.py" />
         <option value="$PROJECT_DIR$/reportviewing/views.py" />
-        <option value="$PROJECT_DIR$/login/templates/login/base.html" />
         <option value="$PROJECT_DIR$/hawaiidoh/settings.py" />
+        <option value="$PROJECT_DIR$/login/templates/login/base.html" />
       </list>
     </option>
   </component>
@@ -1043,16 +1035,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login/templates/login/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.285714">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        <state vertical-scroll-proportion="-12.857142">
+          <caret line="30" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="75" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hawaiidoh/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.9585799">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        <state vertical-scroll-proportion="4.034024">
+          <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
           <folding />
         </state>
       </provider>
