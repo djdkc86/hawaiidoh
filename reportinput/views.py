@@ -125,7 +125,7 @@ def epi12a(request):
                 s.lname = form.cleaned_data['lname']
                 s.dateofbirth = form.cleaned_data['dateofbirth']
                 s.age = calc_age(form.cleaned_data['dateofbirth'])
-                s.entry_date = form.cleaned_data['entrydate']
+                s.entry_date = datetime.date.today()
                 s.noshotrecord = form.cleaned_data['noshotrecord']
                 s.exempt_rel = form.cleaned_data['exempt_rel']
                 s.exempt_med = form.cleaned_data['exempt_med']
@@ -189,7 +189,7 @@ def epi12b(request):
                 s.lname = form.cleaned_data['lname']
                 s.dateofbirth = form.cleaned_data['dateofbirth']
                 s.enrollment_id = grade.pk
-                s.entry_date = form.cleaned_data['entrydate']
+                s.entry_date = datetime.date.today()
                 s.noshotrecord = form.cleaned_data['noshotrecord']
                 s.exempt_rel = form.cleaned_data['exempt_rel']
                 s.exempt_med = form.cleaned_data['exempt_med']
@@ -296,7 +296,7 @@ def update12b(request, student_id):
             s.lname = form.cleaned_data['lname']
             s.dateofbirth = form.cleaned_data['dateofbirth']
             s.enrollment_id = grade.pk
-            s.entry_date = form.cleaned_data['entrydate']
+            s.entry_date = datetime.date.today()
             s.noshotrecord = form.cleaned_data['noshotrecord']
             s.exempt_rel = form.cleaned_data['exempt_rel']
             s.exempt_med = form.cleaned_data['exempt_med']
@@ -407,7 +407,7 @@ def update12a(request, student_id):
             s.mname = form.cleaned_data['mname']
             s.lname = form.cleaned_data['lname']
             s.age = calc_age(form.cleaned_data['dateofbirth'])
-            s.entry_date = form.cleaned_data['entrydate']
+            s.entry_date = datetime.date.today()
             s.dateofbirth = form.cleaned_data['dateofbirth']
             s.noshotrecord = form.cleaned_data['noshotrecord']
             s.exempt_rel = form.cleaned_data['exempt_rel']
