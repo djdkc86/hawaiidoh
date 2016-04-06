@@ -30,43 +30,35 @@
 	</nav>
     {% block header %}
     {% endblock %}
-
     <nav class="collapse navbar-inverse navbar-collapse bs-navbar-collapse" role="navigation">
-      <div id="navbarCollapse" class="collapse navbar-collapse">
-<ul class="dropdown-menu" role="menu">
-<li class="dropdown">
-<a data-toggle="dropdown" class="dropdown-toggle" href="#">Manage <b class="caret"></b></a>
-<ul role="menu" class="dropdown-menu">
-	{% if request.session.role == 1 %}
-<li><a href="{% url 'register:facilitylist' %}">Facility</a></li>
-	{% else %}
-	<li><a href="{% url 'register:facilitylanding' request.session.fac %}">Facility</a></li>
-	{% endif %}
-<li><a href="{% url 'register:userlist' %}">User</a></li>
-<li><a href="{% url 'reportviewing:studentfilter' %}">Student</a></li>
-</ul>
-</li>
-<li class="dropdown">
-<a data-toggle="dropdown" class="dropdown-toggle" href="#">Report <b class="caret"></b></a>
-<ul role="menu" class="dropdown-menu">
-{% if request.session.hasprek == 1 and request.session.role != 1 %}
+      <div class="container">
+        {% csrf_token %}
+
+          <ul class="nav navbar-nav">
+          {% if request.session.role == 1 %}
+            <li><a href="{% url 'register:facilitylist' %}">Manage Facility</a></li>
+            {% endif %}
+              {% if request.session.role == 2 or request.session.role == 3 %}
+                  <li><a href="{% url 'register:facilitylanding' request.session.fac %}">Manage Facility</a></li>
+              {% endif %}
+          {% if request.session.role == 1 or request.session.role == 2%}
+              <li><a href="{% url 'register:userlist' %}">Manage User's</a></li>
+          {% endif %}
+            {% if request.session.hasprek == 1 and request.session.role != 1 %}
              <li><a href="{% url 'reportinput:landing12a' %}">Create EPI12A</a></li>
             {% endif %}
             {% if request.session.onlyprk == 0 and request.session.role != 1 %}
                 <li><a href="{% url 'reportinput:landing12b' %}">Create EPI12B</a></li>
             {% endif %}
-<li><a href="{% url 'reportviewing:date' %}">View</a></li>
-</ul>
-</li>
-<li><a href="{% url 'support:open' %}">Support</a></li>
-</ul>
-<!--This is the search bar
-<form role="search" class="navbar-form navbar-left">
-<div class="form-group">
-<input type="text" placeholder="Search" class="form-control">
-</div>
-</form>-->
-</div>
+
+                <li><a href="{% url 'reportviewing:date' %}">View Reports</a></li>
+
+            {% csrf_token %}
+              <li><a href="{% url 'support:open' %}">Support Request</a></li>
+            <li><a href="{% url 'reportviewing:studentfilter' %}">Student List</a> </li>
+          <li><a href="{% url 'login:landingpage' %}">Home</a> </li>
+        </ul>
+      </div>
     </nav>
 
 	<div class="container">
