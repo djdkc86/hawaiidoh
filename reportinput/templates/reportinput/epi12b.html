@@ -2,6 +2,9 @@
 
 {% block content %}
     <h1 style="text-align: center">EPI12B</h1>
+<div class="container">
+        <p class="text-muted">Select check bos if student has a medical or religious exemption, is missing PE, TB or any vaccine doses</p>
+      </div>
     <form action="" method="post">
     {% csrf_token %}
     {{ formset.management_form }}
