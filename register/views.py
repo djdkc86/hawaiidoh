@@ -66,8 +66,7 @@ def facilitylist(request):
             if form.cleaned_data['island'] is None:
                 request.session['island'] = 'all'
             else:
-                request.session['island'] = Island.objects.get(pk =
-form.cleaned_data['island']).pk
+                request.session['island'] = Island.objects.get(pk = form.cleaned_data['island']).pk
             if form.cleaned_data['district'] is None:
                 request.session['district'] = 'all'
             else:

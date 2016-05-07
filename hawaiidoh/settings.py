@@ -94,13 +94,17 @@ WSGI_APPLICATION = 'hawaiidoh.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'doh',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+        'USER': 'postgres',
+        'PASSWORD': 'q6CscTVKXcEe'
     }
 }
 
 
-DATABASES['default'] = dj_database_url.config()
+#DATABASES['default'] = dj_database_url.config()
 
 
 # Internationalization
@@ -126,22 +130,6 @@ STATICFILES_DIRS = (
     '/var/www/static/',
 )
 
+STATIC_URL = '/static/'
+
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-
-AWS_STORAGE_BUCKET_NAME = 'hawaiidohstaticfiles'
-AWS_ACCESS_KEY_ID = 'AKIAJWAVZRZCKLRWHGCA'
-AWS_SECRET_ACCESS_KEY = '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'
-# Tell django-storages that when coming up with the URL for an item in S3 storage, keep
-# it simple - just use this domain plus the path. (If this isn't set, things get complicated).
-# This controls how the `static` template tag from `staticfiles` gets expanded, if you're using it.
-# We also use it in the next setting.
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-
-# This is used by the `static` template tag from `static`, if you're using that. Or if anything else
-# refers directly to STATIC_URL. So it's safest to always set it.
-STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
-
-# Tell the staticfiles app to use S3Boto storage when writing the collected static files (when
-# you run `collectstatic`).
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
